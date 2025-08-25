@@ -3,25 +3,43 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RNG</title>
+    <title>Gæt et tal!</title>
     <style>
-      #maxnum {
+      #gobtn,
+      #guessnum {
         border: solid 1px;
         border-color: white;
         outline: none;
         -moz-appearance: textfield;
         appearance: textfield;
-        min-width: 1ch;
-        width: 3ch;
         background-color: transparent;
         color: white;
         font-family: monospace;
       }
+      #guessnum {
+        min-width: 1ch;
+        width: 3ch;
+      }
+      #gobtn {
+        cursor: pointer;
+        user-select: none;
+      }
+      #gobtn:hover {
+        color: rgb(0, 255, 0);
+      }
 
-      #maxnum::-webkit-inner-spin-button,
-      #maxnum::-webkit-outer-spin-button {
+      #guessnum::-webkit-inner-spin-button,
+      #guessnum::-webkit-outer-spin-button {
         -webkit-appearance: none;
         margin: 0;
+      }
+
+      .green {
+        color: rgb(0, 255, 0);
+      }
+
+      .red {
+        color: rgb(255, 0, 0);
       }
     </style>
   </head>
@@ -29,13 +47,10 @@
     <main>
       <p style="color: white">
         <b
-          >Tilfældigt tal fra 0 -
-          <input id="maxnum" type="number" value="100" />: </b
-        ><br><br><span
-          id="randnum"
-          style="color: rgb(0, 255, 0); cursor: pointer; user-select: none"
-          title="kantede paranteser [ ] er kun et æstetisk valg"
-        ></span>
+          >Gæt det korrekte tal mellem 0-100: <br /><br />
+          <input id="guessnum" type="number" value="100" />
+          <button id="gobtn">>Gæt (Mellemrum)</button> </b
+        ><br /><br /><span id="verifytext"></span>
       </p>
     </main>
 
