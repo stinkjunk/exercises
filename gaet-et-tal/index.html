@@ -5,6 +5,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Gæt et tal!</title>
     <style>
+      /* FIND UD AF DETTE */
+      #matrixCanvas {
+        /*nedenstående gør at animationen dækker hele viewport*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        pointer-events: none; /* kliks går igennem */
+        z-index: 9999; /*så den sikkert sidder på toppen*/
+      }
+      /*----------*/
+
       #gobtn,
       #guessnum {
         border: solid 1px;
@@ -43,7 +56,13 @@
       }
     </style>
   </head>
+
+
   <body style="background-color: black; font-family: monospace">
+
+      <!-- FIND UD AF DETTE -->
+  <canvas id="matrixCanvas"></canvas>
+  <!-- ------------------ -->
     <main>
       <p style="color: white">
         <b

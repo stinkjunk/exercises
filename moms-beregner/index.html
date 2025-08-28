@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Momsberegner</title>
+    '
+    <style>
+      #gobtn,
+      #input {
+        border: solid 1px;
+        border-color: white;
+        outline: none;
+        -moz-appearance: textfield;
+        appearance: textfield;
+        background-color: transparent;
+        color: white;
+        font-family: monospace;
+      }
+      #input {
+        min-width: 1ch;
+        width: 2ch;
+      }
+      #gobtn {
+        cursor: pointer;
+        user-select: none;
+      }
+      #gobtn:hover {
+        color: rgb(0, 255, 0);
+      }
+      #input::-webkit-inner-spin-button,
+      #input::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      
+      .green {
+        color: rgb(0, 255, 0);
+      }
+    </style>
+  </head>
+  <body style="background-color: black; font-family: monospace">
+    <main>
+      <p style="color: white">
+        <b
+          >Udregn moms (25%) af prisen: 
+          <input id="input" type="number" value="20" /> kr.- <br /><br />
+          <button id="gobtn">>Udregn momsgebyr</button>:</b
+        > <span id="resultattekst"></span>
+      </p>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>

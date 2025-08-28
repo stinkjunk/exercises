@@ -1,3 +1,5 @@
+"use strict";
+
 const randNumSelctor = document.querySelector("#randnum");
 const maxInput = document.querySelector("#maxnum");
 
