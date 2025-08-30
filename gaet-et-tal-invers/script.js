@@ -8,20 +8,18 @@ const guessBtn = document.querySelector("#guessComputer");
 let guessRange = { lowest: 0, highest: 100 };
 let lastGuess;
 
-guessBtn.addEventListener("click", computerGuess);
+import  { resizeInput } from "../utils/utils.js"; import { rng } from "../utils/utils.js";
 
-document.addEventListener("keydown", (event) => {
-  if (event.code === "Space") {
-    computerGuess();
-    event.preventDefault();
-  }
+
+guessBtn.addEventListener("click", () => {
+  computerGuess();
+  unhideSecondaryBtns();
 });
 
 function computerGuess() {
   console.log("Computer gætter...");
   let compGuess =
-    Math.floor(Math.random() * (guessRange.highest - guessRange.lowest + 1)) +
-    guessRange.lowest; // tilfældigt tal mellem laveste og højeste
+    rng(guessRange.lowest, guessRange.highest) //genererer et tilfældigt tal mellem det laveste og det højeste
   if (compGuess === Number(inputNum.value)) {
     compAnsw.innerHTML = `Computer gættede rigtigt! Det var ${compGuess} = ${inputNum.value}`;
     compAnsw.classList = "green";
@@ -39,6 +37,15 @@ function computerGuess() {
   return (lastGuess = compGuess);
 }
 
+function unhideSecondaryBtns() {
+  console.log("startet")
+  lowBtn.style.display = "inline";
+  highBtn.style.display = "inline";
+  guessBtn.style.display = "none";
+}
+//input
+inputNum.addEventListener("input", () => resizeInput(inputNum));
+
 highBtn.addEventListener("click", () => {
   console.log("For højt!");
   guessRange.highest = lastGuess - 1; //sæt højeste til sidste gæt minus 1
@@ -53,8 +60,5 @@ lowBtn.addEventListener("click", () => {
 }); 
 
 //styling-relateret - ikke nødvendig for funktionalitet:
-function resizeInput() {
-  this.style.width = this.value.length + "ch";
-}
 
 ///debug:

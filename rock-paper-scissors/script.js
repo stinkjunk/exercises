@@ -6,7 +6,6 @@ const scsbtn = document.querySelector("button.scissors");
 const playerHands = document.querySelectorAll(".player");
 const playerHand = document.querySelector("#player1");
 const compuHand = document.querySelector("#player2");
-
 rckbtn.addEventListener("mousedown", choiceRock);
 papbtn.addEventListener("mousedown", choicePaper);
 scsbtn.addEventListener("mousedown", choiceScissors);
@@ -14,6 +13,8 @@ const compuChoice = ["Rock", "Paper", "Scissors"]; //Array af valgmuligheder com
 const tie = document.querySelector("#draw");
 const win = document.querySelector("#win");
 const loss = document.querySelector("#lose");
+
+// import { rng } from "../utils/utils.js"; //whatever
 
 // let playerScore = 0;
 // let compuScore = 0;
