@@ -1,16 +1,27 @@
 ul {
+    padding: 0;
+    margin: 0;
     list-style: none;
-    display: flex;
-    align-items: flex-end;
-    gap: 1ch;
+    /* display: flex;
+    align-items: flex-end; */
+    gap: 1%;
     block-size: 100px;
     padding: 0;
     margin: 0;
+    width: 100%;
+    display: grid;
+    /**/
+    grid-template-columns: repeat(calc(var(--maxcols) + 1), 1fr); /* evenly divide width */
+    align-items: end; /* sæt søjler i bunden */
+    /*styling for dynamiske søjler*/
 }
 
 li {
-    /* --height: 40; */
-    inline-size: 3ch;
+    /* --height: 40;
+    Note to self: Max height should be 100.
+    Define height variable in HTML
+    */
+    /* inline-size: 3ch; */
     height: calc(var(--height) * 1px);
     background: color-mix(in hsl, red, green calc(var(--height) * 1%));
 }

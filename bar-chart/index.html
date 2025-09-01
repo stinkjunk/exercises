@@ -1,17 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bar Chart</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script type="module" src="script.js"></script> -->
+    <style>
+      #speedslider {
+        font-family: monospace;
+      }
+      #speedslider::-webkit-inner-spin-button,
+      #speedslider::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script type="module" src="script.js"></script>
-</head>
+      .small {
+        font-size: 80%;
+      }
 
-<body>
+      #options {
+        display: none;
+      }
+      #options.active {
+        display: block;
+      }
+      button#secrets{
+        scale: 70%;
+        opacity: 30%;
+      }
+      button#secrets.active {
+        scale: 100%;
+        opacity: 100%;
+        color: #080;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Bar Chart</h1>
     <ul>
-        <!-- <li></li>
+      <!-- <li></li>
         <li></li>
         <li></li>
         <li></li>
@@ -32,8 +62,25 @@
         <li></li>
         <li></li> -->
     </ul>
-
-
-</body>
-
+    <br />
+    <button id="secrets">psst..!</button>
+    <div id="options">
+      <h3>Super Secret Options...</h3>
+      <p>
+        Hastighed (Sekunder per ny søjle):
+        <input
+          id="speedslider"
+          type="number"
+          value="1"
+          style="display: inline; min-width: 4ch; width: 4ch"
+        />
+      </p>
+      <p class="small" style="opacity: 80%">
+        Brøktal (,) accepteret. <br />
+        Max 10 sekunder. En negativ værdi eller en værdi på 0 betyder, at der
+        opdateres per din browsers FPS.
+      </p>
+    </div>
+    <script src="script.js" type="module"></script>
+  </body>
 </html>
