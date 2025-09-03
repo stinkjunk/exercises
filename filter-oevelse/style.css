@@ -1,9 +1,46 @@
+body {
+    font-family: sans-serif;
+    padding: 1%;
+}
+
+span.na{
+    opacity: 20%;
+}
+
+
 table {
     border-collapse: collapse;
     border: 2px solid rgb(140 140 140);
     font-family: sans-serif;
     font-size: 0.8rem;
     letter-spacing: 1px;
+    width: 100%;
+}
+
+.info{
+    margin-top: 1%;
+    padding: 0;
+    
+    /* border: 2px solid rgb(140 140 140); */
+
+}
+
+.info > p{
+    margin: 0;
+    padding: 0.5%;
+    font-weight: 600;
+}
+
+.filtrer{
+    
+    margin: 0.5%;
+    padding: 0;
+    height: 5cqh;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 0.5%;
+
 }
 
 caption {
@@ -21,6 +58,10 @@ th,
 td {
     border: 1px solid rgb(160 160 160);
     padding: 8px 10px;
+}
+
+td{
+    text-align: center;
 }
 
 td:last-of-type {

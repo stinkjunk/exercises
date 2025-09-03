@@ -8,21 +8,37 @@
   </head>
 
   <body>
-    <table>
-      <thead>
-        <tr>
-          <th>Type</th>
-          <th>Fuel</th>
-          <th>Passengers</th>
-          <th>Stops</th>
-          <th>Owned By</th>
-          <th>Electric</th>
-          <th>Tandem</th>
-        </tr>
-      </thead>
-      <tbody></tbody>
-    </table>
-
+    <main>
+      <h1>Filter Øvelse</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Type</th>
+            <th>Fuel</th>
+            <th>Passengers</th>
+            <th>Stops</th>
+            <th>Owned By</th>
+            <th>Electric?</th>
+            <th>Tandem?</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <!-- Properties: -->
+      <!-- Type	Fuel	Passengers	Stops	Owned By	Electric	Tandem -->
+       <div class="info">
+      <p>Filtrer:</p>
+      <div class="filtrer">
+        <button id="erEl">Eldrevet</button>
+        <button id="ovrTo">Passagercapacitet > 2</button>
+        <button id="ejrJonas">Ejet af <i>Jonas</i></button>
+        <button id="rugBrdMulti">
+          Rugbrødsfartøjer med Passagercapacitet > 1
+        </button>
+        <button id="clear">Ryd</button>
+      </div>
+      </div>
+    </main>
     <script type="module" src="script.js"></script>
   </body>
 </html>
