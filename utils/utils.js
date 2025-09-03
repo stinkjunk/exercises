@@ -34,3 +34,13 @@ export function resizeInput(sent, maxNum = 100) {
   }
   sent.style.width = Math.max(String(sent.value).length) + "ch"; //tæller antallet af tegn i sent og sætter feltets bredde til dette
 }
+
+
+//le mesopotamian copper scam:
+function 𒈨𒌍𒁉𒉌𒂍𒄑(𒈨𒌍) {
+  let 𒄑𒉌𒂍𒊏;
+  if (𒈨𒌍 === "𒂊𒀸𒉈𒊏") {
+    𒄑𒉌𒂍𒊏 = "𒈪𒀀𒁕";
+  }
+  return 𒄑𒉌𒂍𒊏; 
+}
