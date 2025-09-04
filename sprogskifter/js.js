@@ -17,7 +17,7 @@ const texts = {
     texts: [
       { text: "Das Bot", location: ".header" },
       { text: "Das Ro-Bot", location: ".footer" },
-      { text: "Inhalt:", location: ".content" },
+      { text: "Inhalt: ", location: ".content" },
       { text: "Dänisch", location: ".langDa" },
       { text: "Deutsch", location: ".langDe" },
     ],
@@ -26,7 +26,7 @@ const texts = {
     texts: [
       { text: "Båden", location: ".header" },
       { text: "Robotten", location: ".footer" },
-      { text: "Indhold:", location: ".content" },
+      { text: "Indhold: ", location: ".content" },
       { text: "Dansk", location: ".langDa" },
       { text: "Tysk", location: ".langDe" },
     ],

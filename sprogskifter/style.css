@@ -1,0 +1,71 @@
+/* hvis jeg orker */
+/*oxford blue*/
+:root {
+  --oxford-blue: #000022;
+  --penn-blue: #001242;
+  --blue-NCS: #0094c6;
+  --lapis-lazuli: #005e7c;
+  --rich-black: #040f16;
+}
+body {
+  /* background-color: var(--penn-blue); */
+  background-image: radial-gradient(var(--blue-NCS), var(--oxford-blue));
+  font-family: sans-serif;
+  padding: 0;
+  margin: 0;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.header {
+  background-color: var(--oxford-blue);
+  text-align: center;
+}
+.content {
+  
+  display: flex;
+  justify-content: center;
+}
+p {
+  color: whitesmoke;
+}
+.content > *,
+.contentText > * {
+  display: inline;
+}
+header {
+  font-size: 5em;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
+  margin-bottom: 2%;
+  text-transform: uppercase;
+  padding-top: 2%;
+  padding-bottom: 2%;
+}
+
+header > p {
+  margin: 0;
+  padding: 0;
+}
+
+select#locale {
+  margin-left: 1%;
+  background-color: var(--rich-black);
+  color: whitesmoke;
+  border-radius: 100px;
+}
+option {
+  border-radius: 100px;
+}
+body > * {
+  padding-left: 2%;
+  padding-right: 2%;
+}
+
+.footer {
+  text-align: center;
+  background-color: var(--oxford-blue);
+}
