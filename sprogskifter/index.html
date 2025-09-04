@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Language Switcher</title>
+
+    <style>
+      body {
+        font-family: sans-serif;
+      }
+      .content > *,
+      .contentText > * {
+        display: inline;
+      }
+      
+    </style>
+  </head>
+
+  <body>
+    <header class="header">UDSKIFTES</header>
+    <div class="content">
+      <div class="contentText"><p>Content:</p></div>
+      <select id="locale">
+        <option value="da">
+          <span class="langDa">Dansk</span>
+        </option>
+        <option value="de"><span class="langDe">Tysk</span></option>
+      </select>
+    </div>
+    <div class="footer">UDSKIFTES</div>
+    <script type="module" src="js.js"></script>
+  </body>
+</html>
