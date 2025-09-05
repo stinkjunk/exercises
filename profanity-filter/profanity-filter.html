@@ -3,9 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dokument</title>
+    <title>Profanity Filter</title>
+    <style>
+        .censored {
+            background-color: black;
+            color: white;
+            font-family: monospace;
+            text-transform: uppercase;
+            padding-left: 0.25ch;
+            padding-right: 0.25ch;
+            margin-left: 0.25ch;
+            margin-right: 0.25ch;
+        }
+    </style>
 </head>
 <body>
-    <script src="" type="module"></script>
+    <h2>Profanity Filter</h2>
+    <p id="text"></p>
+    <button id="censor"></button>
+    <script src="profanity-filter.js" type="module"></script>
 </body>
 </html>
