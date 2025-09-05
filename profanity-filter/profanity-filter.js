@@ -33,8 +33,18 @@ function censorText(text) {
   console.log("text (pre-censor): ", text);
   console.log("(Logged in censorText)");
   curseWords.forEach((word) => {
-    text = text.replace(word.bad, `<span class="censored">[${word.good}]</span>`);
-    console.log("Bad word: ", word.bad, " Good word: ", word.good);
+    if (word.bad === "marquee") {
+      text = text.replace(
+        word.bad,
+        `<marquee class="censored" style="width: ${word.good.length}ch; display: inline-block; vertical-align: middle;">[${word.good}]</marquee>`
+      );
+    } else {
+      text = text.replace(
+        word.bad,
+        `<span class="censored">[${word.good}]</span>`
+      );
+      console.log("Bad word: ", word.bad, " Good word: ", word.good);
+    }
   });
   console.log("text (post-censor): ", text);
   return text;
