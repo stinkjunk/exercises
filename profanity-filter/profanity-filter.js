@@ -34,12 +34,12 @@ function censorText(text) {
   console.log("(Logged in censorText)");
   curseWords.forEach((word) => {
     if (word.bad === "marquee") {
-      text = text.replace(
+      text = text.replaceAll(
         word.bad,
-        `<marquee class="censored" style="width: ${word.good.length}ch; display: inline-block; vertical-align: middle;">[${word.good}]</marquee>`
+        `<span class="censored">[<marquee style=      "width: ${word.good.length}ch; display: inline-block; vertical-align: middle;">${word.good}</marquee>]</span>`
       );
     } else {
-      text = text.replace(
+      text = text.replaceAll(
         word.bad,
         `<span class="censored">[${word.good}]</span>`
       );
