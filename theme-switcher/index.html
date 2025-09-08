@@ -1,0 +1,71 @@
+<!-- Har skrevet min opgave på engelsk da opgavebeskrivelsen
+ inkluderede engelske ord. -->
+
+<!DOCTYPE html>
+<html lang="en" data-theme="">
+  <head>
+    <script>
+      const prefersDark = window.matchMedia(
+        "(prefers-color-scheme: dark)"
+      ).matches;
+      const theme = prefersDark ? "dark" : "";
+      document.documentElement.setAttribute("data-theme", theme);
+      //inline JS so the browser theme gets loaded before the page
+      //is rendered (no "light-theme flash" on load for dark theme
+      //users).
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Theme Switcher</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Turret+Road:wght@200;300;400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header><h1>Theme Switcher</h1></header>
+    <main>
+      <div class="centralizer">
+        <div class="textbox">
+          <div class="vertDivider">
+            <div>
+              <h2>Page content</h2>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod
+                iure nihil asperiores corporis. Vel voluptatibus incidunt
+                dolorem facere a, eius nihil quo accusamus, commodi pariatur
+                voluptates quisquam enim.<br /><br />
+                Dolorum doloribus voluptatem velit fugit sapiente, cum earum
+                placeat illum laborum unde molestiae cupiditate! Velit, rem!
+                Nesciunt vero pariatur <a href="#">blanditiis sapiente ad?</a>
+              </p>
+            </div>
+            <div class="selectField">
+              <p>Theme:</p>
+              <select name="theme" id="theme">
+                <option value="system">
+                  System Theme (<span id="sysTheme"></span>)
+                </option>
+                <option value="">Light</option>
+                <option value="dark">Dark</option>
+                <option value="hawaii">Hawaii</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="gridfilter"></div>
+    </main>
+    <footer>
+      <p>
+        Text, text, text, text, text, text, text, text, text, text, text, text,
+        text, text, text, text, text, text, text, text, text, text, text, text,
+      </p>
+      <a href="#">Link</a>
+    </footer>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
