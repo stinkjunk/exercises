@@ -21,11 +21,22 @@ function loadJSON() {
 }
 
 function prepareObjects( jsonData ) {
+    console.log("jsonData: ", jsonData);
     jsonData.forEach( jsonObject => {
         // TODO: Create new object with cleaned data - and store that in the allAnimals array
+        console.log("Current jsonObject: ", jsonObject);
+        const Animal = {
+            name : jsonObject.fullname.split(" ")[0],
+            type : jsonObject.fullname.split(" ")[3],
+            desc : jsonObject.fullname.split(" ")[2],
+            age : jsonObject.age
+        }
+        console.log("Animal: ", Animal);
+        allAnimals.push( Animal );
         
         // TODO: MISSING CODE HERE !!!
     });
+    console.log("allAnimals: ", allAnimals);
 
     displayList();
 }

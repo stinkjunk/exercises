@@ -1,3 +1,5 @@
+"use strict";
+
 const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 console.log("prefersDark: ", prefersDark);
 
