@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pointer Move</title>
+    <style>
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0%;
+        padding: 0%;
+        /*center elements:*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      body > * {
+        margin: 0;
+        padding: 0;
+        color: white;
+        mix-blend-mode: difference;
+      }
+    </style>
+  </head>
+  <body style="background-color: hsl(0, 0%, 100%)">
+    <h1>Pointer-Move</h1>
+
+    <p>X: Hue, Mousescroll: Saturation, Y: Lightness</p>
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

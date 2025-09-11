@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>inQueue Visualizer (Mark I)</title>
+    <style>
+      html {
+        font-family: Helvetica, Arial, sans-serif;
+      }
+      body {
+        height: 100vh;
+        width: 100vw;
+        margin: 0%;
+        padding: 0%;
+        /*center elements:*/
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+      }
+      .visualizer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem;
+        width: 30ch;
+        background-color: rgba(0, 0, 0, 0.897);
+        color: white;
+        border: solid 1px black;
+        border-radius: 10px;
+        padding: 1%;
+      }
+
+      #visualizer {
+        transition: scale 0.5s ease-in-out;
+      }
+      #visualizer.bounce {
+        scale: 200%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="visualizer">
+      <p>inQueue:</p>
+      <p id="visualizer">NaN</p>
+      <!-- NaN is placeholder -->
+    </div>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>
